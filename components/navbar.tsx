@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Menu, X, Glasses } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
-import Theme from './theme-toggle'
+// import Theme from './theme-toggle'
 import Image from 'next/image'
 
 const navItems = [
@@ -62,7 +62,7 @@ export function Navbar() {
               ))}
               <div className="pt-2">
                 <Button className="w-full">Get Started</Button>
-                <Theme />
+                {/* <Theme /> */}
               </div>
             </div>
           </motion.div>
