@@ -29,10 +29,10 @@ export function AutoScrollCarousel({ images, baseVelocity = 1 }: ParallaxProps) 
   })
 
   return (
-    <div className="overflow-hidden whitespace-nowrap my-20 py-8 bg-accent/50">
-      <motion.div className="flex gap-4 whitespace-nowrap w-[200%]" style={{ x }}>
+    <div className="overflow-hidden whitespace-nowrap my-10 py-4 sm:my-20 sm:py-8 bg-accent/50">
+      <motion.div className="flex gap-2 sm:gap-4 whitespace-nowrap w-[200%]" style={{ x }}>
         {[...images, ...images].map((image, i) => (
-          <motion.div key={i} className="relative h-[80vh] w-screen flex-shrink-0 rounded-lg overflow-hidden" transition={{ duration: 0.5 }}>
+          <motion.div key={i} className="relative h-[50vh] sm:h-[80vh] w-[75vw] sm:w-screen flex-shrink-0 rounded-lg overflow-hidden" transition={{ duration: 0.5 }}>
             <img src={image} alt={`Carousel image ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </motion.div>

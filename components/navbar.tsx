@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import DropdownMenuS from './dropdown-menu'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -26,6 +27,18 @@ export function Navbar() {
               <Image src="/Logo-edit.jpg" alt="logo" width={60} height={60} className="rounded-full" />
             </Link>
           </motion.div>
+
+          <div className="hidden md:flex items-center space-x-8">
+            {/* {navItems.map((item) => (
+              <motion.div key={item.name} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <Link href={item.href} className="text-muted-foreground hover:text-primary transition-colors">
+                  {item.name}
+                </Link>
+              </motion.div>
+            ))} */}
+            <DropdownMenuS />
+            <DropdownMenuS />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -51,6 +64,10 @@ export function Navbar() {
         {isOpen && (
           <motion.div className="md:hidden" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.2 }}>
             <div className="px-2 pt-2 pb-3 space-y-1">
+              <div className="flex gap-3">
+                <DropdownMenuS />
+                <DropdownMenuS />
+              </div>
               {navItems.map((item) => (
                 <Link
                   key={item.name}

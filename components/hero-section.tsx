@@ -3,12 +3,11 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
 
 export function HeroSection() {
   return (
     <div className="relative overflow-hidden">
-      <motion.div className="container h-[100vh] mt-[150px] mx-auto px-4 pt-32 pb-20 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+      <motion.div className="container  h-[80vh] flex flex-col items-center mx-auto px-4 pt-32 pb-20 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
         <motion.h1
           className="text-6xl font-bold mb-6 h-auto bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60"
           initial={{ y: -50 }}
